@@ -68,16 +68,26 @@ section .yellow,
 .yellow {
   color: #e8d92d;
 }
+.small {
+  font-size: .7em;
+}
+.newline {
+  clear: both;
+}
+.tab {
+  margin-left: 1em;
+}
+a {
+  color: #e69b8c;
+}
+a:hover {
+  text-decoration: none;
+}
 #home .en,
 #home .nl {
   display: block;
 }
-a {
-  text-decoration: none;
-}
-header {
-  position: block;
-}
+/*@import ("stylesheets/colors.less")*/
 ul#menu {
   background: #469a33;
   font-family: FolksBold;
@@ -97,6 +107,7 @@ ul#menu li {
 }
 ul#menu li a {
   color: white;
+  text-decoration: none;
   text-shadow: 0 0 2px black;
 }
 ul#menu li a:hover {
@@ -109,7 +120,7 @@ ul#menu li a:hover {
   background-color: #9a9933;
 }
 .accordion,
-#accordeon {
+.accordeon {
   background-color: #7ca924;
 }
 .adults,
@@ -129,11 +140,25 @@ ul#menu li a:hover {
 .contact {
   background-color: #555555;
 }
-canvas {
-  margin: 0;
+/*
+.home{ background: -moz-linear-gradient(to bottom, @menuBrown 0%,@menuArmy 100%); }
+.bosz{ background: -moz-linear-gradient(to bottom, @menuArmy 0%,@menuGrass 100%); }
+.accordion, .accordeon{ background: -moz-linear-gradient(to bottom, @menuGrass 0%,@menuGreen 100%); }
+.adults, .volwassenen{ background: -moz-linear-gradient(to bottom, @menuGreen 0%,@menuTeal 100%); }
+.kids{ background: -moz-linear-gradient(to bottom, @menuTeal 0%,@menuRed 100%); }
+.faq{ background: -moz-linear-gradient(to bottom, @menuRed 0%,@menuOrange 100%); }
+.tarieven, .tuition{ background: -moz-linear-gradient(to bottom, @menuOrange 0%,@menuGray 100%); }
+.contact{ background: -moz-linear-gradient(to bottom, @menuGray 0%,@menuBrown 100%); }
+*/.priceTable {
+  margin: 50px auto 0;
+  border: 10px solid #333333;
+  background: #333333;
+}
+.priceTable td {
+  padding: 5px 20px 5px 0;
 }
 section {
-  padding: 50px;
+  padding: 20px 50px 20px 50px;
   clear: both;
   margin: 0 auto;
   box-sizing: content-box;
@@ -142,11 +167,8 @@ section {
   display: block;
   min-height: 600px;
 }
-section P {
-  margin-bottom: 35px;
-}
 .page {
-  padding-left: 20px;
+  padding-left: 40px;
   color: #ccc;
 }
 .page h1 {
@@ -163,12 +185,42 @@ section P {
   z-index: 5;
   margin: 0;
 }
+.page h2:first-child {
+  margin-bottom: 30px;
+}
 .page p {
   position: relative;
   z-index: 4;
-  margin-left: 20px;
   max-width: 670px;
   text-align: left;
+}
+.page.lotsoftext p {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+}
+#switchNl,
+#switchEn {
+  display: inline;
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+}
+#switchNl {
+  left: 100px;
+  color: #e8d92d;
+}
+#switchEn {
+  left: 200px;
+  color: #70c2f1;
+}
+.points {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 70%;
+}
+.points li {
+  list-style: circle outside none;
+  margin-bottom: .2em;
 }
 #portrait {
   top: 30px;
@@ -182,24 +234,13 @@ section P {
 #portrait h1 {
   color: #d35239;
 }
-#switchNl,
-#switchEn {
-  display: inline;
-  position: relative;
-  cursor: pointer;
-}
-#switchNl {
-  left: 100px;
-  top: 10px;
-  color: #e8d92d;
-}
-#switchEn {
-  left: 200px;
-  top: 50px;
-  color: #70c2f1;
-}
 #boszacc {
   position: absolute;
   right: 74px;
   top: 214px;
+}
+#giantAcc {
+  position: absolute;
+  top: 675px;
+  right: 0;
 }

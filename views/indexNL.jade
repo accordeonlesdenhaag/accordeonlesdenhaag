@@ -2,24 +2,24 @@ extends opmaak
 
 block content
   section.page
-    #portrait
-      img(src=hostname + "images/bosz.jpg")
-      h1 Bosz de Kler
-    h1 Accordeonles
-    p.nl(style="color: #E8D92D;") Leer stap voor stap accordeon spelen!
-      br
-      | Neem lessen van een ervaren muzikant.
-      br
-      | Lespraktijk voor Den Haag, voor jong en oud.
-    a#switchNl(href="/nl/")
-      | Nederlands
-      img(src=hostname + "images/accordeon_y.png")
-    h1.blue(style="top: 25px;") Accordion lessons
-    p.blue(style="top: 25px") Learn to playaccordion by taking lessons
-      br
-      | from a professional musician
-      br
-      | Lessons for adults and children in The Hague
-    a#switchEn(href="/en/")
-      | English
-      img(src=hostname + "images/accordeon_b.png")
+    include portrait
+    div
+      h1 Accordeonles
+      p.nl(style="color: #E8D92D;") Leer stap voor stap accordeon spelen!
+        br
+        | Neem lessen van een ervaren muzikant.
+        br
+        | Lespraktijk voor Den Haag, voor jong en oud.
+      a#switchNl(href="/nl/")
+        | Nederlands
+        img(src=hostname + "images/accordeon_y.png")
+    div
+      h1.blue(style="top: 25px;") Accordion lessons
+      p.blue(style="top: 25px") Learn to playaccordion by taking lessons
+        br
+        | from a professional musician
+        br
+        | Lessons for adults and children in The Hague
+      a#switchEn(href="/en/")
+        | English
+        img(src=hostname + "images/accordeon_b.png")

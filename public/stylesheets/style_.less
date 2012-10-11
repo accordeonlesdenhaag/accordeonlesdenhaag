@@ -1,69 +1,5 @@
-@font-face {
-	font-family: 'FolksLightRegular';
-	src: url('Folks-Light-webfont.eot');
-	src: url('Folks-Light-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Folks-Light-webfont.woff') format('woff'),
-			 url('Folks-Light-webfont.ttf') format('truetype'),
-			 url('Folks-Light-webfont.svg#FolksLightRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'FolksRegular';
-	src: url('Folks-Normal-webfont.eot');
-	src: url('Folks-Normal-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Folks-Normal-webfont.woff') format('woff'),
-			 url('Folks-Normal-webfont.ttf') format('truetype'),
-			 url('Folks-Normal-webfont.svg#FolksRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'FolksBold';
-	src: url('Folks-Bold-webfont.eot');
-	src: url('Folks-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Folks-Bold-webfont.woff') format('woff'),
-			 url('Folks-Bold-webfont.ttf') format('truetype'),
-			 url('Folks-Bold-webfont.svg#FolksBold') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'FolksHeavyRegular';
-	src: url('Folks-Heavy-webfont.eot');
-	src: url('Folks-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Folks-Heavy-webfont.woff') format('woff'),
-			 url('Folks-Heavy-webfont.ttf') format('truetype'),
-			 url('Folks-Heavy-webfont.svg#FolksHeavyRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'YokaweradRegular';
-	src: url('Yokawerad-webfont.eot');
-	src: url('Yokawerad-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Yokawerad-webfont.woff') format('woff'),
-			 url('Yokawerad-webfont.ttf') format('truetype'),
-			 url('Yokawerad-webfont.svg#YokaweradRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@standardYellow: #e8d92d;
-@menuBrown: #a46528;
-@menuArmy: #9a9933;
-@menuGrass: #7ca924;
-@menuGreen: #339A53;
-@menuTeal: #349599;
-@menuRed: #D35239;
-@menuOrange: #D68D0E;
-@menuGray: #555555;
-@babyBlue: #70c2f1;
-@softRed: #D35239;
+@import "fonts";
+@import "colors";
 
 *{
 	/*outline: 1px dotted red;*/
@@ -96,6 +32,8 @@ p {
 }
 
 
+
+
 section.page  .blue,
 .blue{
   color: @babyBlue;
@@ -105,58 +43,38 @@ section .yellow,
   color: @standardYellow;
 }
 
+.small{
+  font-size: .7em;
+}
+
+.newline{
+  clear: both;
+}
+
+.tab{
+  margin-left: 1em;
+}
+
+a{
+  color: lighten(@softRed, 20);
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
 #home .en,
 #home .nl{
 	display: block; 
 }
 
-a{
-	text-decoration: none;
-}
 
-header{
-	position: block;
-}
+@import "menu";
 
-
-ul#menu{
-	background: #469a33;
-	font-family: FolksBold;
-	font-size: 1.5em;
-	margin: 0 auto;
-	padding: 0;
-  li{
-	  height: 60px;
-	  width: 12.5%;
-	  float: left;
-	  list-style: none;
-	  text-align: center;
-	  line-height: 60px;
-	  cursor: pointer;
-	  font-size: 19px;
-    a{
-	    color: white;
-	    text-shadow: 0 0 2px black;
-         &:hover{
-           text-shadow: 0 0 8px black;
-         }
-    }
-  }
-}
-
-.home{ background-color: @menuBrown; }
-.bosz{ background-color: @menuArmy; }
-.accordion, #accordeon{ background-color: @menuGrass; }
-.adults, #volwassenen{ background-color: @menuGreen; } 
-.kids{ background-color: @menuTeal; }
-.faq{ background-color: @menuRed; }
-.tarieven, .tuition{ background-color: @menuOrange; }
-.contact{ background-color: @menuGray; }
-
-canvas { margin: 0 }
+@import "pricetable";
 
 section{
-  padding: 50px;
+  padding: 20px 50px 20px 50px;
   clear: both;
   margin: 0 auto;
   box-sizing: content-box;
@@ -164,73 +82,41 @@ section{
   font-size: 1.2em;
   display: block;
   min-height: 600px;
-  P{
-    margin-bottom: 35px;
-  }
 }
 
 .page{
-  padding-left: 20px;
+  padding-left: 40px;
   color: #ccc;
-}
-
-.page h1{
-	font-family: YokaweradRegular;
-	font-size: 30px;
-	position: relative;
-	z-index: 5;
-	margin: 0;
- color: @standardYellow;
-}
-
-.page h2{
-	font-size: 2em;
-	position: relative;
-	z-index: 5;
-	margin: 0;
-}
-
-.page p{
-	position: relative;
-	z-index: 4;
-	margin-left: 20px;
-	max-width: 670px;
-	text-align: left;
-}
-
-#portrait{
-  top: 30px;
-  bottom: 50px;
-  right: 0px;
-  float: right;
-  margin: 20px;
-  font-size: .6em;
-  font-stretch: extra-expanded;
   h1{
-    color: @softRed;
+	  font-family: YokaweradRegular;
+	  font-size: 30px;
+	  position: relative;
+	  z-index: 5;
+	  margin: 0;
+    color: @standardYellow;
   }
-}
-#switchNl,
-#switchEn{
-  display: inline;
-  position: relative;
-  cursor: pointer;
+  h2{
+	  font-size: 2em;
+	  position: relative;
+	  z-index: 5;
+	  margin: 0;
+    &:first-child{
+      margin-bottom: 30px;
+    }
+  }
+  p{
+	  position: relative;
+	  z-index: 4;
+	  max-width: 670px;
+	  text-align: left;
+  }
+  &.lotsoftext{
+   p{
+     font-family: helvetica, arial, sans-serif;
+     font-weight: lighter;
+   }
+ }
 }
 
-#switchNl{
-  left: 100px;
-  top: 10px;
-  color: @standardYellow;
-}
-
-#switchEn{
-  left: 200px;
-  top: 50px;
-  color: #70c2f1;
-}
-
-#boszacc{
-  position: absolute;
-  right: 74px;
-  top: 214px;
-}
+@import "specifics";
+@import "images";

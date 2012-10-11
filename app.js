@@ -22,7 +22,7 @@ app.configure(function(){
   app.use(require('less-middleware')( { src: __dirname + '/public' } ));
   app.use(express.errorHandler());
   
-  app.use(express.favicon());
+  app.use(express.favicon(__dirname + ' /static/images/favicon.ico '));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());

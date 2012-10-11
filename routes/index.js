@@ -28,6 +28,7 @@ var dutchLookups = {
 var englishLookups = {
   index: new genericAction('indexEN' , titlePrefix.en + 'Home'),
   bosz: new genericAction('boszEN', titlePrefix.en + 'Bosz de Kler'),
+  accordion: new genericAction('accordion', titlePrefix.en + 'the Accordion'),
   adults: new genericAction('adults', titlePrefix.en + 'Adults'),
   kids: new genericAction('kids', titlePrefix.en + 'Kids'),
   terms: new genericAction('terms', titlePrefix.en + 'Terms'),
