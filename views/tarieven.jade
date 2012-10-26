@@ -2,8 +2,11 @@ extends opmaak
 
 block content
   section.page
-    h2 Tarieven bij automatische incasso
-    h6 (N.B. 1 maand opzegtermijn)
+    h1 Tarieven
+    br
+    p
+      img.vingertje(src="/images/vingertje.jpg")
+      | DE EERSTE LES IS GRATIS
     table.priceTable
       tr
         td Jeugd
@@ -12,6 +15,15 @@ block content
           span.price &#8364;
             | 50,-
         td (half uur per week)
+      tr
+        td Jeugd duo
+        td per maand
+        td
+          span.price &#8364;
+            | 30,-
+        td (per leerling)
+          br
+          br
       tr
         td Volwassenen
         td per maand
@@ -27,13 +39,26 @@ block content
             | 32,50
         td (half uur om de week)
       tr
-        td Jeugd duo
+        td
         td per maand
         td
           span.price &#8364;
-            | 30,-
-        td (per leerling)
+            | 90,-
+        td (een uur per week)
+          br
+          br
       tr
         td Andere lesmogelijkheden
+        td in overleg
+      tr
+        td Verhuur accordeon
+        td per maand
         td
-          a(href="mailto://boszdekler@gmail.com") in overleg
+          span.price &#8364;
+            | 25,-
+        td (plus borg)
+      tr
+        td
+          br
+          | Tarieven bij automatische incasso
+    include pricesImages
