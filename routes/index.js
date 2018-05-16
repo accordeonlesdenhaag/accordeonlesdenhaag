@@ -4,7 +4,7 @@
  */
  
 var titlePrefix = {nl: "Accordeonles Den Haag - ", en: "Accordion lessons The Hague - "},
-    hostname = "http://vps847.directvps.nl/";
+    hostname = "http://www.accordeonlesdenhaag.nl/";
 
 function genericAction(settings){
   this.action = function(req, res){

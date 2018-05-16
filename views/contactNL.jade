@@ -5,14 +5,22 @@ block content
 		h1 Contactgegevens
 		br
 		include('./contactImages.jade')
-		p Om aan te melden, voor vragen of een gratis proefles kunt u contact opnemen per telefoon of email.
-		br
-		p N.B. In de periode 12 december 2012 tot 31 december ben ik alleen bereikbaar per email ivm een studiereis.
+		p Om aan te melden, voor vragen of een gratis proefles kunt u contact opnemen per telefoon of door uw gegevens hieronder in te vullen.
 		br
 		p Bosz de Kler
 		p telefoon 06 15465232
-		p
-			a(href="mailto://boszdekler@gmail.com") boszdekler@gmail.com
+		form(action="/contactform", method="POST", data-submitmessage="Bedankt voor het invullen,<br>ik neem zo snel mogelijk contact met u op.")
+			input(type="text", placeholder="Naam", name="name")
+			input(type="text", placeholder="Telefoonnummer", name="tel")
+			input(type="email", placeholder="E-mail", name="email")
+			textarea(name="remark", placeholder="Opmerking")
+			input(type="hidden", name="token", value=generateToken())
+			input(type="hidden", name="lang", value="nl")
+			input(type="submit") Verzenden
 		br
-		h2 Locatie:
-		include map.jade
+		#location
+			h2 Locatie:
+			include map.jade
+
+block append footer
+	script(src="/javascripts/formhandler.js")
