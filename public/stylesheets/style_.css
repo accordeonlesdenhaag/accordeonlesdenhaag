@@ -86,16 +86,16 @@ ul#menu {
   font-size: 1.5em;
   margin: 0 auto 25px;
   padding: 0;
+	display: flex;
 }
 ul#menu li {
   height: 60px;
-  width: 12.5%;
-  float: left;
   list-style: none;
   text-align: center;
   line-height: 60px;
   cursor: pointer;
   font-size: 19px;
+	flex-grow: 1;
 }
 ul#menu li a {
   color: white;
