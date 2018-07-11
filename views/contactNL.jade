@@ -5,18 +5,12 @@ block content
 		h1 Contactgegevens
 		br
 		include('./contactImages.jade')
-		p Om aan te melden, voor vragen of een gratis proefles kunt u contact opnemen per telefoon of door uw gegevens hieronder in te vullen.
+		p Om aan te melden, voor vragen of een gratis proefles kunt u contact opnemen per telefoon of email.
 		br
 		p Bosz de Kler
 		p telefoon 06 15465232
-		form(action="/contactform", method="POST", data-submitmessage="Bedankt voor het invullen,<br>ik neem zo snel mogelijk contact met u op.")
-			input(type="text", placeholder="Naam", name="name")
-			input(type="text", placeholder="Telefoonnummer", name="tel")
-			input(type="email", placeholder="E-mail", name="email")
-			textarea(name="remark", placeholder="Beste Bosz,\\n")
-			input(type="hidden", name="token", value=generateToken())
-			input(type="hidden", name="lang", value="nl")
-			input(type="submit", value="Verzenden")
+		p
+			a(href="mailto://boszdekler@gmail.com") boszdekler@gmail.com
 		br
 		#location
 			h2 Locatie:
